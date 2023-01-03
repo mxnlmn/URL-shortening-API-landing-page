@@ -14,12 +14,17 @@ export default{
             </ul>
             <ul class = "nav-login">
                 <li>Login</li>
-                <li class = "rounded-btn">Sign Up</li>
+                <li class = "sign-btn rounded-btn">Sign Up</li>
             </ul>
         </div>
+        <img class = "menu-btn" src="../assets/images/hamburger.svg"/>
     </div>
 </template>
 <style>
+    .menu-btn{
+        display: none;
+    }
+    
     .header{
         margin: 2em 5em;
         display: flex;
@@ -51,5 +56,36 @@ export default{
     }
     img:active{
         transform: scale(.8)
+    }
+    @media screen and (max-width: 768px){
+        .header{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .menu-btn{
+            display: block;
+        }
+        .navigation{
+            position: absolute;
+            top: 3em;
+            flex-direction: column;
+            justify-content: center;
+            background-color: hsl(257, 27%, 26%);
+            border-radius: 1em;
+            padding: 2em;
+        }
+        ul{
+            flex-direction: column;
+        }
+        li{
+            color: white;
+        }
+
+    }
+    @media screen and (max-width: 425px){
+        .header{
+            margin: 1em 2em;
+        }
     }
 </style>
