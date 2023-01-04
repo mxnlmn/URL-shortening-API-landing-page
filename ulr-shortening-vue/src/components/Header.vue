@@ -1,12 +1,23 @@
 <script>
 export default{
-    name: "Header"
+    name: "Header",
+    data(){
+        return{
+            isActive: false
+        }
+    },
+    methods:{
+        openMenu(){
+            this.isActive = !this.isActive
+        }
+    }
 }
 </script>
 <template>
     <div class = "header">
         <img src="../assets/images/logo.svg"/>
-        <div class = "navigation">
+        <div class = "navigation" 
+            :class = "{ open: isActive }">
             <ul class = "nav-links">
                 <li>Features</li>
                 <li>Pricing</li>
@@ -17,7 +28,7 @@ export default{
                 <li class = "sign-btn rounded-btn">Sign Up</li>
             </ul>
         </div>
-        <img class = "menu-btn" src="../assets/images/hamburger.svg"/>
+        <img @click = "openMenu" class = "menu-btn" src="../assets/images/hamburger.svg"/>
     </div>
 </template>
 <style>
@@ -52,7 +63,7 @@ export default{
     }
     img{
         cursor: pointer;
-        transition: .2s;
+        transition: .05s;
     }
     img:active{
         transform: scale(.8)
@@ -68,18 +79,31 @@ export default{
         }
         .navigation{
             position: absolute;
-            top: 3em;
+            top: -25em;
             flex-direction: column;
             justify-content: center;
             background-color: hsl(257, 27%, 26%);
             border-radius: 1em;
             padding: 2em;
+            transition: .5s ease-in-out;
+        }
+        .open{
+            top: 3em;
+        }
+        .nav-links{
+            border-bottom: 1px solid gray;
+            padding-top: 0;
+        }
+        .nav-login{
+            padding-bottom: 0;
         }
         ul{
             flex-direction: column;
+            padding: 2em 0;
         }
         li{
             color: white;
+            font-weight: 700;
         }
 
     }

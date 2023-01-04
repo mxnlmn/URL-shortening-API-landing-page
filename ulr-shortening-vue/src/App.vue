@@ -7,8 +7,13 @@ import Api from './components/Api.vue'
 <template>
   <div>
     <Header/>
+    <Hero/>
   </div>
 </template>
 
-<style scoped>
+<style>
+  div{
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 </style>
