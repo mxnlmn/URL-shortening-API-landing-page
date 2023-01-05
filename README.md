@@ -1,5 +1,1 @@
-# URL-shortening-API-landing-page
-
-
-тут ніхуя немає
-йди нахуй
+# URL-shortening-API-landing-page Vue.js
