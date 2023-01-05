@@ -57,15 +57,17 @@ export default{
         color: gray;
         transition: .2s;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
     li:active{
         transform: scale(.8)
     }
-    img{
+    .menu-btn{
         cursor: pointer;
         transition: .05s;
+        -webkit-tap-highlight-color: transparent;
     }
-    img:active{
+    .menu-btn:active{
         transform: scale(.8)
     }
     @media screen and (max-width: 768px){
@@ -86,6 +88,7 @@ export default{
             border-radius: 1em;
             padding: 2em;
             transition: .5s ease-in-out;
+            z-index: 999;
         }
         .open{
             top: 3em;
@@ -109,7 +112,7 @@ export default{
     }
     @media screen and (max-width: 425px){
         .header{
-            margin: 1em 2em;
+            margin: 1em 1em;
         }
     }
 </style>

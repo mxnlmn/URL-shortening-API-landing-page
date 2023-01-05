@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    /* overflow-x: hidden; */
 }
 .rounded-btn{
     background-color: hsl(180, 66%, 49%);
